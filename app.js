@@ -143,6 +143,54 @@ function plusThree(num) {
   }
   
   const answer = plusThree(5);
-//
+//global
+let myGlobal = 10;
+
+function fun1() {
+  oopsGlobal = 5;
+}
+console.log(myGlobal)
+//local
+function myLocalScope() {
+  const myVar;
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+//local vs global
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  const outerWear = "sweater";
+  return outerWear;
+}
+
+myOutfit();
+//Use Conditional Logic with If Statements
+function trueOrFalse(wasThatTrue) {
+ 
+  if (wasThatTrue){
+    return "Yes, that was true";
+}
+{
+return  "No, that was false";
+}
+//Comparison with the Equality Operator
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+//Comparison with the Strict Equality Operator
+function testStrict(val) {
+  if (val === 7) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
 
 
